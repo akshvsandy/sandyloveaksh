@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Sandhya</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="glass">
+        <header>
+          <div class="music-control">
+            <button id="musicBtn" class="btn-music">Play Music</button>
+            <audio id="bgMusic" loop>
+              <source src="" type="audio/mp3" />
+              <!-- User to add music URL here -->
+            </audio>
+          </div>
+          <h1 class="title">My Lovely Wife</h1>
+        </header>
+
+        <main id="main-content">
+          <div id="reasons-container" class="reasons-container">
+            <h3>Why I Love You...</h3>
+            <p id="reason-text">You are my best friend...</p>
+          </div>
+
+          <div class="gallery">
+            <div class="polaroid rotate-left">
+              <img src="Image (2).jpg" alt="When We First Met" />
+              <p class="caption">When We First Met�</p>
+            </div>
+            <div class="polaroid rotate-right">
+              <img src="Image (3).jpg" alt="Your Beautiful Smile" />
+              <p class="caption">My Favorite Smile</p>
+            </div>
+            <div class="polaroid rotate-left">
+              <img src="Image (4).jpg" alt="Our First Trip Together" />
+              <p class="caption">Our First Trip Together</p>
+            </div>
+          </div>
+
+          <p class="love-letter" id="typewriter"></p>
+
+          <div class="proposal-box hidden" id="proposal-box">
+            <div class="heart-container">
+              <div class="heart"></div>
+            </div>
+            <h2>Will you be my Valentine?</h2>
+            <div class="buttons">
+              <button id="yesBtn" class="btn btn-yes">Yes, forever!�</button>
+              <button id="noBtn" class="btn btn-no">No</button>
+            </div>
+          </div>
+
+          <div id="celebration" class="hidden">
+            <h2>Yay! You made me the happiest person alive!�</h2>
+            <p>I love you so much, Sandhya!</p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
