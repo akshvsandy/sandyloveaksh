@@ -1,0 +1,269 @@
+:root {
+  --primary: #ff4d6d;
+  --secondary: #ff8fa3;
+  --bg-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --text-color: #590d22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  color: var(--text-color);
+  padding: 20px;
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  text-align: center;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  /* Hide scrollbar for smooth look */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.glass::-webkit-scrollbar {
+  width: 6px;
+}
+.glass::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 20px;
+}
+
+.music-control {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+.btn-music {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.btn-music:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: #c9184a;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.reasons-container {
+  min-height: 80px;
+  margin-bottom: 30px;
+}
+
+.reasons-container h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#reason-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  min-height: 1.6em;
+  transition: opacity 0.5s ease;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: 140px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.polaroid .caption {
+  font-family: "Dancing Script", cursive;
+  color: #555;
+  font-size: 1rem;
+}
+
+.polaroid:hover {
+  transform: scale(1.1) rotate(0deg) !important;
+  z-index: 10;
+}
+
+.rotate-left {
+  transform: rotate(-5deg);
+}
+.rotate-right {
+  transform: rotate(5deg);
+}
+
+.love-letter {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Rest of the original CSS... */
+.heart-container {
+  margin: 20px auto;
+  width: 60px;
+  height: 60px;
+  animation: beat 1s infinite alternate;
+}
+
+.heart {
+  background-color: var(--primary);
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: var(--primary);
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  position: relative;
+  min-height: 60px;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yes {
+  background: var(--primary);
+  color: white;
+}
+.btn-yes:hover {
+  background: #a4133c;
+  transform: scale(1.05);
+}
+
+.btn-no {
+  background: white;
+  color: var(--primary);
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+#celebration h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #c9184a;
+  margin-bottom: 15px;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .polaroid {
+    width: 45%;
+  }
+}
